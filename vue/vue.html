@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue知识点 | 前端小菜鸟</title>
+    <meta name="description" content="我们不生产代码，我们只是代码的搬运工">
+    <meta name="keywords" content="技术博客,学习笔记,Vue,JavaScript,笔记">
+  <meta name="keywords" content="前端,小程序,Vue,JavaScript,笔记">
+  <meta name="keywords" content="框架,Typescript">
+  <meta name="description" content="个人学习笔记,优质博客,三人行，必有我师焉，择其善者而从之，其不善者而改之。">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.34dcb3ee.css" as="style"><link rel="preload" href="/assets/js/app.7ee303dc.js" as="script"><link rel="preload" href="/assets/js/2.1031c649.js" as="script"><link rel="preload" href="/assets/js/120.2d7decd1.js" as="script"><link rel="prefetch" href="/assets/js/10.a330fafc.js"><link rel="prefetch" href="/assets/js/100.920d0886.js"><link rel="prefetch" href="/assets/js/101.c1495f18.js"><link rel="prefetch" href="/assets/js/102.49ebe9b9.js"><link rel="prefetch" href="/assets/js/103.f8c8089f.js"><link rel="prefetch" href="/assets/js/104.6d0809d2.js"><link rel="prefetch" href="/assets/js/105.f23fb029.js"><link rel="prefetch" href="/assets/js/106.474ca08c.js"><link rel="prefetch" href="/assets/js/107.ec7a3837.js"><link rel="prefetch" href="/assets/js/108.4e07fb38.js"><link rel="prefetch" href="/assets/js/109.f247f580.js"><link rel="prefetch" href="/assets/js/11.6a23d30c.js"><link rel="prefetch" href="/assets/js/110.b8d5aa52.js"><link rel="prefetch" href="/assets/js/111.764691dc.js"><link rel="prefetch" href="/assets/js/112.849f8cd0.js"><link rel="prefetch" href="/assets/js/113.2413f610.js"><link rel="prefetch" href="/assets/js/114.6d7e683b.js"><link rel="prefetch" href="/assets/js/115.620e8425.js"><link rel="prefetch" href="/assets/js/116.85900fc3.js"><link rel="prefetch" href="/assets/js/117.8d9c2e37.js"><link rel="prefetch" href="/assets/js/118.f1a7f360.js"><link rel="prefetch" href="/assets/js/119.bf642a78.js"><link rel="prefetch" href="/assets/js/12.429530dc.js"><link rel="prefetch" href="/assets/js/121.f5344f9f.js"><link rel="prefetch" href="/assets/js/122.640be75b.js"><link rel="prefetch" href="/assets/js/123.5b185a4d.js"><link rel="prefetch" href="/assets/js/124.b99ca55a.js"><link rel="prefetch" href="/assets/js/125.eec941a4.js"><link rel="prefetch" href="/assets/js/126.3628f3cc.js"><link rel="prefetch" href="/assets/js/127.1220352b.js"><link rel="prefetch" href="/assets/js/128.1e6a4296.js"><link rel="prefetch" href="/assets/js/129.4b5a31a8.js"><link rel="prefetch" href="/assets/js/13.0160b82a.js"><link rel="prefetch" href="/assets/js/130.035df914.js"><link rel="prefetch" href="/assets/js/131.81d25bb2.js"><link rel="prefetch" href="/assets/js/132.014ab651.js"><link rel="prefetch" href="/assets/js/133.7174cbbf.js"><link rel="prefetch" href="/assets/js/134.f0bfc5db.js"><link rel="prefetch" href="/assets/js/135.4297d0dd.js"><link rel="prefetch" href="/assets/js/136.c23592be.js"><link rel="prefetch" href="/assets/js/137.a3cd0543.js"><link rel="prefetch" href="/assets/js/138.fa2d2dcf.js"><link rel="prefetch" href="/assets/js/139.e95c7302.js"><link rel="prefetch" href="/assets/js/14.51df82cb.js"><link rel="prefetch" href="/assets/js/140.37f32685.js"><link rel="prefetch" href="/assets/js/141.f6c8df59.js"><link rel="prefetch" href="/assets/js/142.ef57f945.js"><link rel="prefetch" href="/assets/js/143.3298b94a.js"><link rel="prefetch" href="/assets/js/144.71170f3b.js"><link rel="prefetch" href="/assets/js/145.eae8d0af.js"><link rel="prefetch" href="/assets/js/146.ef1f785a.js"><link rel="prefetch" href="/assets/js/147.6bd5a703.js"><link rel="prefetch" href="/assets/js/148.0a454b3c.js"><link rel="prefetch" href="/assets/js/149.81cca9bf.js"><link rel="prefetch" href="/assets/js/15.fddccda2.js"><link rel="prefetch" href="/assets/js/150.c5e2fd7b.js"><link rel="prefetch" href="/assets/js/151.4462eb20.js"><link rel="prefetch" href="/assets/js/152.20d9fc56.js"><link rel="prefetch" href="/assets/js/153.3c77ce70.js"><link rel="prefetch" href="/assets/js/16.4cab6643.js"><link rel="prefetch" href="/assets/js/17.43713ec0.js"><link rel="prefetch" href="/assets/js/18.adb8346a.js"><link rel="prefetch" href="/assets/js/19.490f3d15.js"><link rel="prefetch" href="/assets/js/20.c13ec0a8.js"><link rel="prefetch" href="/assets/js/21.47cade02.js"><link rel="prefetch" href="/assets/js/22.d459be62.js"><link rel="prefetch" href="/assets/js/23.65dfa2b4.js"><link rel="prefetch" href="/assets/js/24.f762bf96.js"><link rel="prefetch" href="/assets/js/25.515dccfa.js"><link rel="prefetch" href="/assets/js/26.d7a644f2.js"><link rel="prefetch" href="/assets/js/27.928dd3f1.js"><link rel="prefetch" href="/assets/js/28.21e9e6aa.js"><link rel="prefetch" href="/assets/js/29.66c986c2.js"><link rel="prefetch" href="/assets/js/3.578a2174.js"><link rel="prefetch" href="/assets/js/30.613cebf7.js"><link rel="prefetch" href="/assets/js/31.24d29bef.js"><link rel="prefetch" href="/assets/js/32.750ec8c2.js"><link rel="prefetch" href="/assets/js/33.7368ab66.js"><link rel="prefetch" href="/assets/js/34.471a77c5.js"><link rel="prefetch" href="/assets/js/35.e7cede14.js"><link rel="prefetch" href="/assets/js/36.8039ef06.js"><link rel="prefetch" href="/assets/js/37.0b9323e6.js"><link rel="prefetch" href="/assets/js/38.fa8abebf.js"><link rel="prefetch" href="/assets/js/39.ca14a253.js"><link rel="prefetch" href="/assets/js/4.4a26acc5.js"><link rel="prefetch" href="/assets/js/40.ad702a51.js"><link rel="prefetch" href="/assets/js/41.6fda6107.js"><link rel="prefetch" href="/assets/js/42.2bb20cf6.js"><link rel="prefetch" href="/assets/js/43.64186c01.js"><link rel="prefetch" href="/assets/js/44.cbafb167.js"><link rel="prefetch" href="/assets/js/45.7855853f.js"><link rel="prefetch" href="/assets/js/46.ecc7be72.js"><link rel="prefetch" href="/assets/js/47.ab50ac90.js"><link rel="prefetch" href="/assets/js/48.13b95fd7.js"><link rel="prefetch" href="/assets/js/49.9a70567b.js"><link rel="prefetch" href="/assets/js/5.735dad80.js"><link rel="prefetch" href="/assets/js/50.bcd31221.js"><link rel="prefetch" href="/assets/js/51.f4517228.js"><link rel="prefetch" href="/assets/js/52.e1ebd06e.js"><link rel="prefetch" href="/assets/js/53.88e53525.js"><link rel="prefetch" href="/assets/js/54.e433dcce.js"><link rel="prefetch" href="/assets/js/55.1cdbcd39.js"><link rel="prefetch" href="/assets/js/56.37cfda9b.js"><link rel="prefetch" href="/assets/js/57.ebd43e18.js"><link rel="prefetch" href="/assets/js/58.5fa7a589.js"><link rel="prefetch" href="/assets/js/59.8f72c2c2.js"><link rel="prefetch" href="/assets/js/6.050082b0.js"><link rel="prefetch" href="/assets/js/60.3e05d0e8.js"><link rel="prefetch" href="/assets/js/61.620e72f2.js"><link rel="prefetch" href="/assets/js/62.32c16c46.js"><link rel="prefetch" href="/assets/js/63.2cdc1f88.js"><link rel="prefetch" href="/assets/js/64.f3a1ecee.js"><link rel="prefetch" href="/assets/js/65.6d591801.js"><link rel="prefetch" href="/assets/js/66.6ec5c31c.js"><link rel="prefetch" href="/assets/js/67.b4ec3095.js"><link rel="prefetch" href="/assets/js/68.d4665e8d.js"><link rel="prefetch" href="/assets/js/69.e7e60025.js"><link rel="prefetch" href="/assets/js/7.4317984a.js"><link rel="prefetch" href="/assets/js/70.2d4ab216.js"><link rel="prefetch" href="/assets/js/71.162262b5.js"><link rel="prefetch" href="/assets/js/72.9cedd405.js"><link rel="prefetch" href="/assets/js/73.1a849a72.js"><link rel="prefetch" href="/assets/js/74.4572d84e.js"><link rel="prefetch" href="/assets/js/75.8228b464.js"><link rel="prefetch" href="/assets/js/76.088d68ab.js"><link rel="prefetch" href="/assets/js/77.948488b8.js"><link rel="prefetch" href="/assets/js/78.63376008.js"><link rel="prefetch" href="/assets/js/79.ca7c3dba.js"><link rel="prefetch" href="/assets/js/8.dd7ff447.js"><link rel="prefetch" href="/assets/js/80.81dfad7d.js"><link rel="prefetch" href="/assets/js/81.ac53d033.js"><link rel="prefetch" href="/assets/js/82.060b0f7f.js"><link rel="prefetch" href="/assets/js/83.c4d8b4c7.js"><link rel="prefetch" href="/assets/js/84.796fa9a5.js"><link rel="prefetch" href="/assets/js/85.f6f45c62.js"><link rel="prefetch" href="/assets/js/86.bcaeae91.js"><link rel="prefetch" href="/assets/js/87.dcfd184d.js"><link rel="prefetch" href="/assets/js/88.807d6bff.js"><link rel="prefetch" href="/assets/js/89.005486a8.js"><link rel="prefetch" href="/assets/js/9.eb64505f.js"><link rel="prefetch" href="/assets/js/90.01d9e1a7.js"><link rel="prefetch" href="/assets/js/91.0457489a.js"><link rel="prefetch" href="/assets/js/92.6977dd68.js"><link rel="prefetch" href="/assets/js/93.7feacd75.js"><link rel="prefetch" href="/assets/js/94.a1d9bd01.js"><link rel="prefetch" href="/assets/js/95.44aa93a8.js"><link rel="prefetch" href="/assets/js/96.6d16523c.js"><link rel="prefetch" href="/assets/js/97.4d28340c.js"><link rel="prefetch" href="/assets/js/98.926b1d0d.js"><link rel="prefetch" href="/assets/js/99.189e88ce.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34dcb3ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar my-nav-gre"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端小菜鸟</span></a> <div class="links"><div class="search-box" style="border:none;"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/vue/" class="nav-link router-link-active">vue笔记</a></div><div class="nav-item"><a href="/react/" class="nav-link">react笔记</a></div><div class="nav-item"><a href="/js/" class="nav-link">js笔记</a></div><div class="nav-item"><a href="/wechat/" class="nav-link">微信小程序</a></div><div class="nav-item"><a href="/jiqiao/" class="nav-link">小技巧</a></div><div class="nav-item"><a href="/suanfa/" class="nav-link">算法和数据结构</a></div><div class="nav-item"><a href="/ts/" class="nav-link">typescrpt</a></div><div class="nav-item"><a href="/css/" class="nav-link">css</a></div><div class="nav-item"><a href="/babel/" class="nav-link">babel</a></div><div class="nav-item"><a href="/node/" class="nav-link">node</a></div><div class="nav-item"><a href="/database/" class="nav-link">数据库</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="background-image:linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/vue/" class="nav-link router-link-active">vue笔记</a></div><div class="nav-item"><a href="/react/" class="nav-link">react笔记</a></div><div class="nav-item"><a href="/js/" class="nav-link">js笔记</a></div><div class="nav-item"><a href="/wechat/" class="nav-link">微信小程序</a></div><div class="nav-item"><a href="/jiqiao/" class="nav-link">小技巧</a></div><div class="nav-item"><a href="/suanfa/" class="nav-link">算法和数据结构</a></div><div class="nav-item"><a href="/ts/" class="nav-link">typescrpt</a></div><div class="nav-item"><a href="/css/" class="nav-link">css</a></div><div class="nav-item"><a href="/babel/" class="nav-link">babel</a></div><div class="nav-item"><a href="/node/" class="nav-link">node</a></div><div class="nav-item"><a href="/database/" class="nav-link">数据库</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vue/" class="sidebar-link">vue学习笔记</a></li><li><a href="/vue/vue.html" class="active sidebar-link">vue知识点</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue/vue3.0.html" class="sidebar-link">vue3.0第一次学习</a></li><li><a href="/vue/vue3.0第二次学习.html" class="sidebar-link">vue3.0第二次学习</a></li><li><a href="/vue/计算属性.html" class="sidebar-link">计算属性setter和getter</a></li><li><a href="/vue/vue路由.html" class="sidebar-link">vue路由跳转</a></li><li><a href="/vue/vue-cli.html" class="sidebar-link">vue-cli</a></li><li><a href="/vue/vueui问题.html" class="sidebar-link">element UI框架使用技巧</a></li><li><a href="/vue/vue-router.html" class="sidebar-link">vue路由</a></li><li><a href="/vue/路由.html" class="sidebar-link">vue路由查缺补漏</a></li><li><a href="/vue/路由再次学习.html" class="sidebar-link">vue-router再次学习</a></li><li><a href="/vue/插件开发和全局组件.html" class="sidebar-link">vue插件开发和注册全局组件</a></li><li><a href="/vue/组件自定义使用v-model.html" class="sidebar-link">组件自定义使用v-model</a></li><li><a href="/vue/v-model原理.html" class="sidebar-link">v-model原理</a></li><li><a href="/vue/vue使用防抖.html" class="sidebar-link">在vue里使用防抖</a></li><li><a href="/vue/构造器和组件.html" class="sidebar-link">构造器和组件的区别</a></li><li><a href="/vue/Vue知识点再次学习.html" class="sidebar-link">再次学习Vue</a></li><li><a href="/vue/vuex.html" class="sidebar-link">VUeX</a></li><li><a href="/vue/vuex再次.html" class="sidebar-link">vuex再次学习</a></li><li><a href="/vue/nextTick.html" class="sidebar-link">nextTick异步更新</a></li><li><a href="/vue/监听子组件生命周期.html" class="sidebar-link">父组件监听子组件生命周期</a></li><li><a href="/vue/设置proxy跨域.html" class="sidebar-link">vue设置proxy跨域</a></li><li><a href="/vue/cli3设置环境变量.html" class="sidebar-link">cli3设置环境变量</a></li><li><a href="/vue/cli3使用webpack插件.html" class="sidebar-link">cli3使用webpack插件</a></li><li><a href="/vue/在vue里使用lottie.html" class="sidebar-link">使用在vue中使用lottie</a></li><li><a href="/vue/组件通信多次.html" class="sidebar-link">组件通信被触发多次</a></li><li><a href="/vue/ref和$refs.html" class="sidebar-link">ref和$refs的使用</a></li><li><a href="/vue/vue路由局部刷新原理.html" class="sidebar-link">vue路由局部刷新原理</a></li><li><a href="/vue/vue.extend.html" class="sidebar-link">vue.extend</a></li><li><a href="/vue/watch高级技巧.html" class="sidebar-link">watch实用技巧</a></li><li><a href="/vue/vue3.0使用.html" class="sidebar-link">vue3.0使用</a></li><li><a href="/vue/ssr.html" class="sidebar-link">vue-nuxt 服务端渲染</a></li><li><a href="/vue/自定义事件.html" class="sidebar-link">vue自定义事件原理</a></li><li><a href="/vue/vue计算属性和观察属性的差异.html" class="sidebar-link">vue计算属性和观察属性的差异</a></li><li><a href="/vue/vuediff算法.html" class="sidebar-link">Vuediff算法</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="vue知识点"><a href="#vue知识点" aria-hidden="true" class="header-anchor">#</a> vue知识点</h3> <ul><li><p>在一个html页面里面可以声明多个vue实例 但是在每一个实例里面 只能有一个vue实例</p> <pre><code>	 &lt;div id=&quot;app&quot;&gt;&lt;/div&gt; &lt;div id=&quot;app2&quot;&gt;&lt;/div&gt;  成立   &lt;div id=&quot;app&quot;&gt;&lt;div id=&quot;app&quot;&gt;&lt;/div&gt; &lt;/div&gt; 失败 
+var vm=new Vue({el:&quot;#app&quot;})   var vm1=new Vue({el:&quot;#app2&quot;})
+</code></pre></li> <li><p>在vue实例中，如果要获取data上的数据或者调用methods中的方法，必须使用this.数据属性名 或this.方法名 来访问，this代表我们new出来的vm对象</p></li> <li><p>v-model=&quot;msg&quot; msg是一个变量  如果后面要添加字符串 需要添加''引号来区别</p></li> <li><p>组件简写： login:login === login</p></li> <li><p>如果要传递点击事件  必须使用$event参数 传递进去</p></li></ul> <hr> <ol><li><p>v-cloak 等到页面加载完毕出现</p></li> <li><p>v-text 会覆盖原本中原本的位置  </p><p></p> 不会解析标签<p></p></li> <li><p>v-html 会展示内容的标签  会解析标签</p></li> <li><p>v-bind:xx=&quot;xxxx&quot;  这个是绑定属性  动态绑定属性  简写:xx=&quot;xxxx&quot;</p></li> <li><p>v-on:click=&quot;xxx&quot; 绑定事件     可以传入一个event事件参数: $event    简写@click=&quot;xxx&quot;  注意：事件需要写在 methods:{xxx:function(){xx}}中   methods定义当前实例的所有可用方法</p></li> <li><p>使用计算属性  不需要声明 就可以使用变量  定义:computed:{msg()=&gt;{ return xx}}   使用:  就可以返回</p></li> <li><p>事件修饰符： @click.stop 防止冒泡  @click.prevent去除默认事件 @click.self 点击之身才触发回调函数         事件修饰符可以<strong>串联</strong></p></li> <li><p>v-model:双向数据绑定   <input></p>   在vue里面唯一能够实现的:<strong>表单</strong>双向数据绑定的方法 只能运用在表单元素中<p></p></li> <li><p><strong>使用class样式</strong></p> <ul><li><p>第一种:数组</p> <pre><code>  &lt;h1 :class=&quot;['red','thin']&quot;&gt;&lt;/h1&gt;  
+</code></pre></li> <li><p>第二种:数组使用三元表达式</p> <pre><code>   &lt;h1 :class=&quot;['red','thin',isactibe？'actibe':'']&quot;&gt;&lt;/h1&gt;  
+</code></pre></li> <li><p>第三种:数组中镶嵌对象</p> <pre><code>  &lt;h1 :class=&quot;['red','thin',{'active':isactive}]&quot;&gt;&lt;/h1&gt;  
+</code></pre></li></ul> <p><strong>对象属性为类名  属性的值是一个标识符    键的值如果为true  那么就会使用这个类   如果为false就不会使用这个类</strong></p> <ul><li><p>第四种：直接使用对象</p> <pre><code>  &lt;h1 :class=&quot;{red:true}&quot;&gt;&lt;/h1&gt;
+</code></pre></li></ul></li></ol> <p>第一种：直接在元素上通过:style的形式,书写样式对象</p> <pre><code>	&lt;h1 ：style=&quot;{&quot;color&quot;:'red'}&quot;&gt;&lt;/h1&gt;  
+</code></pre> <p>第二种：将样式对象，定义到data种，并直接引用到:style种</p> <pre><code>	10. v-for 循环: **v-for=&quot;item in arr&quot;**     获取到索引值 v-for=&quot;(item,index) in arr&quot;    in后面可以放 普通数组 对象数组 对象 数字  **放数字是代表循环多少次 数字是1 开始**
+	在组件中使用v-for循环的时候 必须加上 key    ** &lt;my-component v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;&lt;/my-component&gt;**   因为key是唯一标识  一般:key=&quot;item&quot;  
+	key属性只能使用number或者string      key在使用的时候 必须使用v-bind属性绑定的形式，指定key值  items还可以是一个函数的返回值  searth(items) 相当于过滤器
+</code></pre> <ol start="11"><li><p>v-if和v-show  v-if:没错都会删除或创建元素  v-show:每次不会重新删除和创建，只是改变display:none的值</p> <pre><code>12. 定义vue过滤器   全局过滤器  语法： Vue.filter('过滤器的名称',function(data){})    注意：过滤器中的 function ，第一个参数，已经被规定死了，永远都是 过滤器 管道符前面 传递过来的数据  后面可以接受其他参数 		调用格式  
+私有过滤器  语法 实例化对象  filters:{		xxxx(){}	} //条件 [过滤器名称,处理函数]  过滤器是就近原则   如果私有和全局一样 那么优先调用私有
+</code></pre></li> <li><p>自定义键盘修饰符 Vue.config.f2=111  @keyup.f2=xxxx</p> <pre><code>14. 自定义指令： Vue.directive('指令名',对象)       //定义全局指令 不需要添加v-但是在调用的时候 就必须v-前缀 参数2：是一个对象这个对象身上，有一些指令相关的函数，这些函数可以在特点的阶段执行相关的操作 对象里面有很多的内置函数 让我们使用 详情查阅**官方文档**  列举重要的几个: 
+1. bind:function(el){}		 	//每当指令绑定到元素上的时候，会立即执行这个函数 只会执行一次      样式相关  
+2. inserted:function(el){}		//表示元素插入到DOM中的时候 会执行inserted函数 只会执行一次   和js行为有关的在这里面实现
+3. updated:function(el){} 		//当更新的时候，会执行updated	可能会触发多次
+</code></pre></li></ol> <p><strong>在每一个函数中，第一个参数永远是el,表示 被绑定了指令的那个元素 可以直接操作DOM 这个el是一个原生的js对象  el=== <div></div> 所以el 等于我们获取的dom元素  el=== document.querySelector(&quot;xx&quot;)</strong>
+私有指令：directives:{'名字':{xxx}} 	简写私有化指令  'fontSize':function(el,binding){} //注意 这个fuction等同于将代码写到了bind 和update里面去了</p> <ol start="15"><li><p>vue实例的生命周期函数=生命周期函数=生命周期事件： 生命周期函数和el、data等平级</p> <pre><code>					/*这是组件创造建期间的生命周期钩子*/
+ 1. beforeCreate(){} 	//第一个生命周期函数  表示在实例化对象被创建之前	会执行它  **注意在beforeCreate生命周期函数执行的时候 data和methods中的数据都还没有初始化**
+ 2.	created(){}   //第二个生命周期函数   **表示初始化了data和methods的上面的数据**  如果要调用methods中的方法或者操作data中的数据 最早只能在created中去操作
+ 3.	beforeMount(){}  //表示模板已经在内存中编译完成了 但是尚未把模板渲染到页面中  在该函数被执行的时候  页面中的元素还没有被真正的替换过来，	只是之前写的一些 模板字符串
+ 4.	mounted(){} 	//表示已经把内存中的模板挂载到了页面上了  用户可以看见真实的页面 **从这里开始 就可以操作DOM了 虽然不推荐 但是这个地方是可以操作DOM的   如果要操作动态dom只能在这里操作**   该函数是实例创建期间的最后一个生命周期函数，当执行完该函数后 实例的就被完全创造好了 
+
+					/*这是组件运行期间的生命周期钩子  根据data的数据变化，最少运行0次，最多无穷*/
+ 1. beforeUpdate(){}  //表示我们的界面还没有更新  但是数据已经更新了  也就是说 当数据更新的时候 就会触发该函数 但是 我们的界面还没有更新而已   **页面是旧的 data是最新的**
+ 2. updated(){} 	//执行的时候 页面和data数据已经保存同步了 都是最新的了  是让数据和页面同步
+
+				/*这是组件销毁阶段的生命周期钩子  */
+ 1.	beforeDestroy(){} // 当执行该函数的时候，实例身上的所有data、所有的methods以及过滤器、指令都处于可用状态，此时还没有真正执行销毁过程
+ 2.	destroyed(){}  //执行该函数的时候，组件已经被全部销毁，此时组件的data和方法都为不可用状态
+</code></pre></li> <li><p>vue的Ajax请求：</p> <pre><code>		17. 1.vue-resource  2.axios的第三方库   （只要是.then方法的都是使用的promise方法）
+ 1. vue-resource依赖与vue  **向vue实例挂载了一个方法：this.$http.get/post**  这个方法一般放在 creacted 也就是初始化参数的声明周期里面		如果我们通过全局配置了请求的数据接口 根域名 则每次单独发起HTTP请求的时候 请求的url路径 应该以相对路径开头  前面不能带/ 否者配置的根域名不会生效
+</code></pre></li> <li><p>vue动画效果： 使用过渡类名实现动画   <!----> <strong>是谁需要过渡就包裹谁</strong></p> <ol><li><p>使用transition 元素，把 需要被动画控制的元素 包裹起来  <strong>注意这里的xx就是我们name的名字   只需要我们添加类名</strong></p></li> <li><p>要使用样式  xxx-enter,.xxx-leave-to{} //这个是进场动画   v-enter：这是一个时间点  是进入之前，元素的起始状态  此时还没有开始进入    v-leave  是动画离开之后的终止状态，此时，元素 动画已经结束了  <strong>位移效果就是在这里完成</strong></p></li> <li><p>.xxx-enter-active,.xxx-leave-active    /* v-enter-active 入场动画时间段  <em>/			 /</em> v-leave-active 离场动画时间段*/</p> <pre><code> 使用第三方库 完成动画效果：
+ 
+ 1.	 &lt;transition name=&quot;custom-classes-transition&quot;  enter-active-class=&quot;animated tada&quot; 	leave-active-class=&quot;animated bounceOutRight&quot;&gt;   
+ 2.	 注意：属性名称**enter-active-class   leave-active-class**  是跟的class  后面跟上动画名
+ 3.	 动画的生命周期函数： **入场钩子函数** 
+ 	 
+   	v-on:before-enter=&quot;beforeEnter&quot; //进入之前 设置起始状态
+ 
+   	v-on:enter=&quot;enter&quot;			 //进入
+ 
+   	v-on:after-enter=&quot;afterEnter&quot;	//进入之后
+ 
+   	v-on:enter-cancelled=&quot;enterCancelled&quot;//进入取消
+ 
+  ** 定义函数**
+   beforeEnter（el）{} //函数必须传递参数 el也就是我们绑定的那个DOM元素 是原生的js对象 
+ 该函数是表示动画 入场之前， 此时动画没有开始 可以在该函数中 设置动画起始之前的样式
+ 
+  enter（el，done）{
+ done()
+ } //该函数表示 动画开始之后的样式 这里可以设置小球完成动画之后的 结束状态
+ done 就是afterEnter函数 done是函数的引用
+ 
+  afterEnter（el){}	//动画完成 之后执行
+ 
+ 列表动画：transition-group包裹
+  在实现列表过渡的时候，如果需要过度的元素是通过v-for循环渲染出来的，不能使用transition
+ 包裹 需要是需要使用&lt;transition-group&gt;&lt;/transition-group&gt;  但是绑定的时候必须加上:key
+ 
+ 加上进入的效果 &lt;transition-group appear tag=&quot;指定渲染在上面元素上面&quot;&gt;  加一个appear属性 实现入场效果 页面刚展示出来的时候 
+ 删除离开动画效果过渡模板： .name-move{transition:all  0.6s} .name-leave-active{position:absolute}  必须这样完成
+</code></pre></li></ol></li> <li><p>Vue组件：</p> <pre><code>1.定义全局组件
+1.1 使用 var a=Vue.extend({ //创建全局组件
+template:&quot;&quot; //通过template属性，指定了组件要展示的HTML结构
+})
+1.2 使用vue.component('组件名称',创建出来的组件模板对象)
+
+		/**注意：可以直接使用vue.component('xx',{data: function () {
+    return {
+      count: 0
+    }},template: '&lt;button v-on:click=&quot;count++&quot;&gt;You clicked me  times.&lt;/button&gt;'})**/
+1.3使用组件的时候，自需要以标签的形式使用就可以了   **如果组件名是驼峰写法 那么引用的时候就需要把把大写字母用-链接起来 myA == my-A**
+
+2.Vue.component('',{
+template:'&lt;div&gt;&lt;a&gt;&lt;/a&gt;&lt;/div&gt;'	//组件只能有唯一一个根元素
+})
+  
+3.//但是这样写的方式太过于麻烦 那么就有一种方式 可以简化编写模板的过程
+Vue.component('',{
+template:'#app2',	//在模板里面指定我们绑定的元素
+data:function(){   //data为一个函数 并且返回一个对象
+	return {
+msg:'xx'			//组件中的data数据，和实例中的data方式完全一样
+}
+}
+})   
+
+**然后在跟根元素的外面 新建一个模板然后指定id也就是我们在模板里面创建的id 就可以了**
+
+    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt; &lt;template id=&quot;app2&quot;&gt;&lt;/template&gt;
+
+4.定义私有组件 
+components:{
+	login：{
+	template:''
+}
+}
+</code></pre></li> <li><p>展示组件  vue提供conponent，来展示对应组件的名称</p> <pre><code> &lt;component :is=&quot;用来指定要展示的组件的名称&quot;&gt;&lt;/component&gt; //组件名称要用''包裹起来 
+</code></pre></li> <li><p>组件的动画：不需要key 只需要定义动画名即可</p> <pre><code> 定义css样式
+  	.a-enter,.a-leave-to{
+         opacity: 0;
+         transform: translateY(-40px)
+     }
+     .a-enter-active,.a-leave-active{
+         transition: all .5s ease
+     }
+
+ &lt;transition name=&quot;a&quot; model=&quot;out-in&quot;&gt;  //自定动画名的名字  model可以指定2个组件的动画效果的先后顺序
+             &lt;com v-if=&quot;flag&quot;&gt;&lt;/com&gt;
+             &lt;com1 v-else&gt;&lt;/com1&gt;
+ &lt;/transition&gt;
+</code></pre></li> <li><p>组件传值：</p> <pre><code>1.父组件传值 ，可以在引用子组件的时候，通过属性绑定(v-bind:xx)的形式,把需要传递给子组件的数据 以属性绑定的形式传递到子组件内部，供子组件使用 
+&lt;com :xxx=&quot;msg&quot;&gt;&lt;/com&gt; //	通过属性绑定的形式给子组件绑定了 一个xxx属性  他的值是msg   			父 ----&gt; 子
+
+2.子组件接受父组件传递的数据，通过props来接受父组件传递过来的值，**名字必须和父组件传递过来的所绑定的属性一样  并且props是一个数组，里面的内容是一个字符串数组**
+com:{		
+data（）{	return{}	}，   //子组件中的data数据 并不是通过父组件传递过来的 而是子组件私有的 比如通过Ajax请求返回的数据，都可以放到data身上  **在组件中data必须是一个函数  data数据是可读可写的**
+
+ template:'&lt;h1&gt;这是子组件-----&lt;/h1&gt;',
+
+ props:['parent'],//把父组件传递过来的parent属性，现在props数组中定义一下 这样才能使用数组     **props数据是只读的	无法重新赋值	**
+
+        }
+
+3.父组件把方法传递给子组件：只能用事件绑定的方法（v-on:xxx=&quot;xx&quot;）来给子组件传递方法 
+	&lt;com @xxx=&quot;msg&quot;&gt;&lt;/com&gt; //	通过属性绑定的形式给子组件绑定了 一个xxx的事件 
+然后在子组件中 使用 this.$emit('xxx'，参数1，参数2,......)  来触发父组件传递过来的方法  xxx必须和父组件传递过来的名字是一样的   并向父组件传参： **注意里面是一个字符串**
+
+4.子组件向父组件传递参数：使用Vue实例.$emit   来完成
+</code></pre></li> <li><p>获取元素（DOM）和组件
+</p><p>123123</p><p></p> <pre><code>methods:{
+aaa(){ //操作p标签内容 也就是操作DOM   
+	this.$refs.我们定义的名字.dom操作事件
+}
+}
+
+&lt;com ref=&quot;自己定义&quot;&gt;&lt;/com&gt;
+data(){return{a:a}}	
+
+
+
+aaa(){ //操作组件 也就是操作DOM   
+	this.$refs.我们定义的名字.方法/属性
+}
+</code></pre></li> <li><p>路由：</p> <pre><code>1. 导入 vue-router 组件类库：
+
+&lt;!-- 1. 导入 vue-router 组件类库 --&gt;
+  &lt;script src=&quot;./lib/vue-router-2.7.0.js&quot;&gt;&lt;/script&gt;
+```
+2. 使用 router-link 组件来导航
+```
+&lt;!-- 2. 使用 router-link 组件来导航 --&gt;
+&lt;router-link to=&quot;/login&quot;&gt;登录&lt;/router-link&gt;
+&lt;router-link to=&quot;/register&quot;&gt;注册&lt;/router-link&gt;
+```
+3. 使用 router-view 组件来显示匹配到的组件
+```
+&lt;!-- 3. 使用 router-view 组件来显示匹配到的组件 --&gt;
+&lt;router-view&gt;&lt;/router-view&gt;
+```
+4. 创建使用`Vue.extend`创建组件
+```
+    // 4.1 使用 Vue.extend 来创建登录组件
+    var login = Vue.extend({
+      template: '&lt;a&gt;登录组件&lt;/a&gt;'
+    });
+
+    // 4.2 使用 Vue.extend 来创建注册组件
+    var register = Vue.extend({
+      template: '&lt;a&gt;注册组件&lt;/a&gt;'
+    });
+</code></pre></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>		5. 创建一个路由 router 实例，通过 routers 属性来定义路由匹配规则
+		```
+		// 5. 创建一个路由 router 实例，通过 routers 属性来定义路由匹配规则   只能为routers  ** 注意：component 的属性值，必须是一个组件的模板对象，不能是组件的应用名称
+		Vue.compent('xx',{})  不能为xx xx只能用于html标签 只能使用组件的模板对象**
+		    var router = new VueRouter({
+		      routes: [
+				{path:'/',redirect:'/login'}//重定向
+		        { path: '/login', component: login },
+		        { path: '/register', component: register }
+		      ]，
+				linkActiveClass:'xxx',//自定义路由激活使用的样式
+		    });
+		```
+		6. 使用 router 属性来使用路由规则
+		```
+		// 6. 创建 Vue 实例，得到 ViewModel 在实例里面只能使用router来初始化
+		    var vm = new Vue({
+		      el: '#app',
+		      router: router // 使用 router 属性来使用路由规则
+		    });
+		
+		7.使用路由激活样式： 在style中 对 .router-link-active类进行设置样式  就可以实现样式激活的时候 对其设置样式  这个类是vue 提供
+		
+		8.路由传参： 
+					query传参  用this.$route.query.xxx 来获取参数  不需要修改匹配规则
+		
+		**多个参数中用&amp;分隔 ‘foo?id=111&amp;name=123'**
+		1.   &lt;router-link to=&quot;/foo?'传递的属性名称'=10&quot; &gt;切换到第一个组件&lt;/router-link&gt;   传递参数
+		2.   在组件中 使用	this.$route //可以输出 这个路由组件全部信息  然后在里面去读取内容
+			this.$route.query.'传递的属性名称'  //获取传递的属性名 
+		3.	输出 &lt;h1&gt; {{this.$route.query.'需要获取的属性'}}&lt;/h1&gt;    &lt;h1&gt; {{$route.query.'需要获取的属性'}}&lt;/h1&gt;
+		
+				params传参  使用this.$route.params.xx 来获取参数  需要修改匹配规则
+		 1.  {path:'/foo/:id',component:A}	//说明在组件中需要传入一个值
+		 
+		 2.   &lt;router-link to=&quot;/foo/10&quot; &gt;切换到第一个组件&lt;/router-link&gt;   //在组件传入了一个值
+		
+		 	 this.$route.params.'我们在路由规则里面定义的参数'  就可以获取到值 
+			
+		
+		**&lt;!--路由传参可以传递变量 但是必须使用令名路由     也就是 需要在 {path:'/foo/:id',component:A,name:'id'}   注册名字   然后使用--  &lt;router-link ：to=&quot;{name:'id',parems:{id:我们需要传入的变量}}&quot;    然后就可以获取去了  注意 这里的to是属性绑定的方法 &gt;&gt;**
+		
+		31,路由嵌套： 使用children来实现子路由的嵌套  ：注意不能到/
+		
+			`&lt;router-link to=&quot;/parent/a&quot;&gt;a组件&lt;/router-link&gt;` 
+			&lt;router-view&gt;&lt;/router-view&gt;
+			
+			  {path:'/parent',component:parent,
+		        children:[
+		            {path:'a',component:children1},
+		            {path:'b',component:children2}
+		        ]},
+
+	32.命名视图：同级展示多个视图
+		
+	
+		` // 多命名识图路由 组件是带components  带s的  必须带有多个组件
+	        {path:'/',name:'a',components:{
+	            default:box, //不写就是默认展示的组件
+	            a:box2,//需要展示的组件的名称
+	            b:box3
+	        }},`
+	      &lt;router-view name=&quot;a&quot;&gt;&lt;/router-view&gt;   &lt;router-view name=&quot;b&quot;&gt;&lt;/router-view&gt;
+	
+	33.watch监听属性：可以监听data中指定数据的变化，然后触发watch中对应的function 处理函数。可以不用触发methods里面的方法都可以使用
+	
+		` watch:{//使用这个属性可以 监视data中指定数据的变化，然后触发watch中对应的function处理函数
+	            a(newVal,oldVal){//这个是指定监视的元素  该函数带有2个参数 参数可选
+	                    console.log('触发了监听事件')
+	            },
+				'$router.path'(){//监听路由参数的改变
+				}
+	
+	        }`
+	可以监听路由 路径的改变  $router.path 
+	
+	34.计算属性：在这个属性中，可以定义一些属性，这些属性叫做计算属性， 其本质是一个方法，只不过我们，我们在使用这些计算属性的时候，是把他们的名称当作属性来使用的，并不会把计算属性，当作方法去调用
+	
+	不需要在data里面去定义  是直接在computed：{}里面定义的
+	
+	**注意：计算属性 在引用的时候 一定不要加()去调用，直接把它当作普通属性去使用接可以了**
+	
+	**只要 计算属性，这个function内部，所用到的任何data中的数据发送了变化，就会立刻重新计算 这个 计算属性的值**
+	
+	**计算属性的求值结果，会被缓存起来，方便下次直接使用；如果计算属性方法中，所有用的任何数据，都没有发生过变化 则 不会重新对 计算属性求值**
+		
+		` computed:{//在这个属性中，可以定义一些属性，这些属性叫做计算属性， 其本质是一个方法，只不过我们，我们在使用这些计算属性的时候，
+	       //是把他们的名称当作属性来使用的，并不会把计算属性，当作方法去调用
+	            c(){
+	                return this.a+'-'+this.b //一定要有return
+	            }
+	       }`
+	
+	
+	35.render函数：
+	
+		` render:function(createElements){ //vue提供的参数 替换模板显示
+	            return createElements(login)  //替换el指定的那个容器 
+	        }`
+	
+	
+	36.使用solt
+	
+		https://www.cnblogs.com/chinabin1993/p/9115396.html	
+		也就是可以在组件中写东西
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### vue+Webpack结合使用
+	1. 使用npm i vue -S 安装包
+	2. 引入 vue包 如果直接使用import vue from 'vue' 是一个阉割版   会报错 有三种解决方式
+		1. 修改vue目录下的package.json 文件 ，修改main的路径指向vue.js
+		
+		`&quot;main&quot;: &quot;dist/vue.runtime.common.js&quot;,
+	 	 &quot;module&quot;: &quot;dist/vue.runtime.esm.js&quot;,`
+		2. 修改我们引包的路径 
+		`import Vue from '../node_modules/vue/dist/vue.js'
+			`
+		3. 在webpack.config.js配置文件中新增一个节点模块
+	
+		`resolve:{//添加节点
+	        alias:{
+	            &quot;vue$&quot;:'vue/dist/vue.js' //以vue结尾的文件都指向我们定义的目录
+	        }
+	    }`
+	3. webpack无法打包.vue文件，需要安装相关的loader
+		1.npm i vue-loader 	 vue-template-compiler -D  vue-laoder内部依赖 vue-template-compiler
+	
+		2.然后在配置文件配置
+	
+		`const {VueLoaderPlugin}=require(&quot;vue-loader&quot;) //引入插件
+		module:{
+			rules:[
+			{
+			test:/\.vue$/,
+			use:'vue-loader',
+			}
+				]
+		},
+		plugins:[
+		new VueLoaderPlugin() //实例化插件
+		] `
+	
+	4.使用vue-router模块
+	
+		1.  安装npm i vue-router 
+		2.  引包、
+			import VueRouter from 'vue-router'
+		3.  实例化路由
+			`vue.use(VueRouter)`
+
+
+
+### 在.vue文件中
+	1. 需要使用  export default来暴露数据
+		
+		`export default {
+	    data(){ //组件中必须为function
+	        return{
+	
+	        }
+	    },
+	    methods:{
+	        show(){
+	            console.log(&quot;调用了组件的方法&quot;)
+	        }
+	    },
+	    created(){
+	        this.show()
+	    }
+	}`
+
+
+
+
+
+
+git合并分支:
+git pull origin master
+
+
+
+	路由传参最常用：
+	:to=&quot;{
+	        path: 'yourPath', 
+	        params: { 
+	            name: 'name', 
+	            dataObj: data
+	        },
+	        query: {
+	            name: 'name', 
+	            dataObj: data
+	        }
+	    }&quot;&gt;
+	
+		:to=&quot;'/home/newInfo/'+index&quot; //凭借字符串
+
+
+
+
+
+
+	----------
+	// node中向外暴露成语的形式
+	// module.exports={} 和exports 暴露成员
+	// const 名称=require(&quot;模块标识符&quot;) 导入模块
+	
+	
+	
+	
+	// 在es6中，也通过规范的形式，规定了es6中如何 导入和 导出模块
+	// ES6中导入模块 使用 import 模块名称 from &quot;模块标识符&quot; ----&gt; js代码相关  import &quot;表示路径&quot; ----&gt;非js代码相关
+	// 在es6中，使用export default 和export 向外暴露成员：
+	//	在一个模块中可以同时使用  export default 和 export 
+	
+	    export default {  //向外暴露的成员 可以使用任意的变量来接受  一个js文件里面中，只运行向外暴露一次 也就是只能有一个
+	    	xxxxxx                                     
+	    }
+		=============
+		var xxx=123;
+		export default xxx;
+	
+		import 任意变量来接受 from '路径'
+	
+		export var 变量名=`12  //使用exprot 暴露的成员只能使用{1,2,3}的形式接受，叫做按需导出 多个使用 ，隔开 可以暴露多个成员
+		import {变量名} from 'xxxx'  二者变量名必须一样
+	
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">12/16/2019, 10:10:37 AM</span></div></footer> <div class="page-nav"><p class="inner" style="border:none"><span class="prev">
+        ←
+        <a href="/vue/" class="prev router-link-active">
+          vue学习笔记
+        </a></span> <span class="next"><a href="/vue/vue3.0.html">
+          vue3.0第一次学习
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.7ee303dc.js" defer></script><script src="/assets/js/2.1031c649.js" defer></script><script src="/assets/js/120.2d7decd1.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>再次学习Vue | 前端小菜鸟</title>
+    <meta name="description" content="我们不生产代码，我们只是代码的搬运工">
+    <meta name="keywords" content="技术博客,学习笔记,Vue,JavaScript,笔记">
+  <meta name="keywords" content="前端,小程序,Vue,JavaScript,笔记">
+  <meta name="keywords" content="框架,Typescript">
+  <meta name="description" content="个人学习笔记,优质博客,三人行，必有我师焉，择其善者而从之，其不善者而改之。">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.34dcb3ee.css" as="style"><link rel="preload" href="/assets/js/app.7ee303dc.js" as="script"><link rel="preload" href="/assets/js/2.1031c649.js" as="script"><link rel="preload" href="/assets/js/110.b8d5aa52.js" as="script"><link rel="prefetch" href="/assets/js/10.a330fafc.js"><link rel="prefetch" href="/assets/js/100.920d0886.js"><link rel="prefetch" href="/assets/js/101.c1495f18.js"><link rel="prefetch" href="/assets/js/102.49ebe9b9.js"><link rel="prefetch" href="/assets/js/103.f8c8089f.js"><link rel="prefetch" href="/assets/js/104.6d0809d2.js"><link rel="prefetch" href="/assets/js/105.f23fb029.js"><link rel="prefetch" href="/assets/js/106.474ca08c.js"><link rel="prefetch" href="/assets/js/107.ec7a3837.js"><link rel="prefetch" href="/assets/js/108.4e07fb38.js"><link rel="prefetch" href="/assets/js/109.f247f580.js"><link rel="prefetch" href="/assets/js/11.6a23d30c.js"><link rel="prefetch" href="/assets/js/111.764691dc.js"><link rel="prefetch" href="/assets/js/112.849f8cd0.js"><link rel="prefetch" href="/assets/js/113.2413f610.js"><link rel="prefetch" href="/assets/js/114.6d7e683b.js"><link rel="prefetch" href="/assets/js/115.620e8425.js"><link rel="prefetch" href="/assets/js/116.85900fc3.js"><link rel="prefetch" href="/assets/js/117.8d9c2e37.js"><link rel="prefetch" href="/assets/js/118.f1a7f360.js"><link rel="prefetch" href="/assets/js/119.bf642a78.js"><link rel="prefetch" href="/assets/js/12.429530dc.js"><link rel="prefetch" href="/assets/js/120.2d7decd1.js"><link rel="prefetch" href="/assets/js/121.f5344f9f.js"><link rel="prefetch" href="/assets/js/122.640be75b.js"><link rel="prefetch" href="/assets/js/123.5b185a4d.js"><link rel="prefetch" href="/assets/js/124.b99ca55a.js"><link rel="prefetch" href="/assets/js/125.eec941a4.js"><link rel="prefetch" href="/assets/js/126.3628f3cc.js"><link rel="prefetch" href="/assets/js/127.1220352b.js"><link rel="prefetch" href="/assets/js/128.1e6a4296.js"><link rel="prefetch" href="/assets/js/129.4b5a31a8.js"><link rel="prefetch" href="/assets/js/13.0160b82a.js"><link rel="prefetch" href="/assets/js/130.035df914.js"><link rel="prefetch" href="/assets/js/131.81d25bb2.js"><link rel="prefetch" href="/assets/js/132.014ab651.js"><link rel="prefetch" href="/assets/js/133.7174cbbf.js"><link rel="prefetch" href="/assets/js/134.f0bfc5db.js"><link rel="prefetch" href="/assets/js/135.4297d0dd.js"><link rel="prefetch" href="/assets/js/136.c23592be.js"><link rel="prefetch" href="/assets/js/137.a3cd0543.js"><link rel="prefetch" href="/assets/js/138.fa2d2dcf.js"><link rel="prefetch" href="/assets/js/139.e95c7302.js"><link rel="prefetch" href="/assets/js/14.51df82cb.js"><link rel="prefetch" href="/assets/js/140.37f32685.js"><link rel="prefetch" href="/assets/js/141.f6c8df59.js"><link rel="prefetch" href="/assets/js/142.ef57f945.js"><link rel="prefetch" href="/assets/js/143.3298b94a.js"><link rel="prefetch" href="/assets/js/144.71170f3b.js"><link rel="prefetch" href="/assets/js/145.eae8d0af.js"><link rel="prefetch" href="/assets/js/146.ef1f785a.js"><link rel="prefetch" href="/assets/js/147.6bd5a703.js"><link rel="prefetch" href="/assets/js/148.0a454b3c.js"><link rel="prefetch" href="/assets/js/149.81cca9bf.js"><link rel="prefetch" href="/assets/js/15.fddccda2.js"><link rel="prefetch" href="/assets/js/150.c5e2fd7b.js"><link rel="prefetch" href="/assets/js/151.4462eb20.js"><link rel="prefetch" href="/assets/js/152.20d9fc56.js"><link rel="prefetch" href="/assets/js/153.3c77ce70.js"><link rel="prefetch" href="/assets/js/16.4cab6643.js"><link rel="prefetch" href="/assets/js/17.43713ec0.js"><link rel="prefetch" href="/assets/js/18.adb8346a.js"><link rel="prefetch" href="/assets/js/19.490f3d15.js"><link rel="prefetch" href="/assets/js/20.c13ec0a8.js"><link rel="prefetch" href="/assets/js/21.47cade02.js"><link rel="prefetch" href="/assets/js/22.d459be62.js"><link rel="prefetch" href="/assets/js/23.65dfa2b4.js"><link rel="prefetch" href="/assets/js/24.f762bf96.js"><link rel="prefetch" href="/assets/js/25.515dccfa.js"><link rel="prefetch" href="/assets/js/26.d7a644f2.js"><link rel="prefetch" href="/assets/js/27.928dd3f1.js"><link rel="prefetch" href="/assets/js/28.21e9e6aa.js"><link rel="prefetch" href="/assets/js/29.66c986c2.js"><link rel="prefetch" href="/assets/js/3.578a2174.js"><link rel="prefetch" href="/assets/js/30.613cebf7.js"><link rel="prefetch" href="/assets/js/31.24d29bef.js"><link rel="prefetch" href="/assets/js/32.750ec8c2.js"><link rel="prefetch" href="/assets/js/33.7368ab66.js"><link rel="prefetch" href="/assets/js/34.471a77c5.js"><link rel="prefetch" href="/assets/js/35.e7cede14.js"><link rel="prefetch" href="/assets/js/36.8039ef06.js"><link rel="prefetch" href="/assets/js/37.0b9323e6.js"><link rel="prefetch" href="/assets/js/38.fa8abebf.js"><link rel="prefetch" href="/assets/js/39.ca14a253.js"><link rel="prefetch" href="/assets/js/4.4a26acc5.js"><link rel="prefetch" href="/assets/js/40.ad702a51.js"><link rel="prefetch" href="/assets/js/41.6fda6107.js"><link rel="prefetch" href="/assets/js/42.2bb20cf6.js"><link rel="prefetch" href="/assets/js/43.64186c01.js"><link rel="prefetch" href="/assets/js/44.cbafb167.js"><link rel="prefetch" href="/assets/js/45.7855853f.js"><link rel="prefetch" href="/assets/js/46.ecc7be72.js"><link rel="prefetch" href="/assets/js/47.ab50ac90.js"><link rel="prefetch" href="/assets/js/48.13b95fd7.js"><link rel="prefetch" href="/assets/js/49.9a70567b.js"><link rel="prefetch" href="/assets/js/5.735dad80.js"><link rel="prefetch" href="/assets/js/50.bcd31221.js"><link rel="prefetch" href="/assets/js/51.f4517228.js"><link rel="prefetch" href="/assets/js/52.e1ebd06e.js"><link rel="prefetch" href="/assets/js/53.88e53525.js"><link rel="prefetch" href="/assets/js/54.e433dcce.js"><link rel="prefetch" href="/assets/js/55.1cdbcd39.js"><link rel="prefetch" href="/assets/js/56.37cfda9b.js"><link rel="prefetch" href="/assets/js/57.ebd43e18.js"><link rel="prefetch" href="/assets/js/58.5fa7a589.js"><link rel="prefetch" href="/assets/js/59.8f72c2c2.js"><link rel="prefetch" href="/assets/js/6.050082b0.js"><link rel="prefetch" href="/assets/js/60.3e05d0e8.js"><link rel="prefetch" href="/assets/js/61.620e72f2.js"><link rel="prefetch" href="/assets/js/62.32c16c46.js"><link rel="prefetch" href="/assets/js/63.2cdc1f88.js"><link rel="prefetch" href="/assets/js/64.f3a1ecee.js"><link rel="prefetch" href="/assets/js/65.6d591801.js"><link rel="prefetch" href="/assets/js/66.6ec5c31c.js"><link rel="prefetch" href="/assets/js/67.b4ec3095.js"><link rel="prefetch" href="/assets/js/68.d4665e8d.js"><link rel="prefetch" href="/assets/js/69.e7e60025.js"><link rel="prefetch" href="/assets/js/7.4317984a.js"><link rel="prefetch" href="/assets/js/70.2d4ab216.js"><link rel="prefetch" href="/assets/js/71.162262b5.js"><link rel="prefetch" href="/assets/js/72.9cedd405.js"><link rel="prefetch" href="/assets/js/73.1a849a72.js"><link rel="prefetch" href="/assets/js/74.4572d84e.js"><link rel="prefetch" href="/assets/js/75.8228b464.js"><link rel="prefetch" href="/assets/js/76.088d68ab.js"><link rel="prefetch" href="/assets/js/77.948488b8.js"><link rel="prefetch" href="/assets/js/78.63376008.js"><link rel="prefetch" href="/assets/js/79.ca7c3dba.js"><link rel="prefetch" href="/assets/js/8.dd7ff447.js"><link rel="prefetch" href="/assets/js/80.81dfad7d.js"><link rel="prefetch" href="/assets/js/81.ac53d033.js"><link rel="prefetch" href="/assets/js/82.060b0f7f.js"><link rel="prefetch" href="/assets/js/83.c4d8b4c7.js"><link rel="prefetch" href="/assets/js/84.796fa9a5.js"><link rel="prefetch" href="/assets/js/85.f6f45c62.js"><link rel="prefetch" href="/assets/js/86.bcaeae91.js"><link rel="prefetch" href="/assets/js/87.dcfd184d.js"><link rel="prefetch" href="/assets/js/88.807d6bff.js"><link rel="prefetch" href="/assets/js/89.005486a8.js"><link rel="prefetch" href="/assets/js/9.eb64505f.js"><link rel="prefetch" href="/assets/js/90.01d9e1a7.js"><link rel="prefetch" href="/assets/js/91.0457489a.js"><link rel="prefetch" href="/assets/js/92.6977dd68.js"><link rel="prefetch" href="/assets/js/93.7feacd75.js"><link rel="prefetch" href="/assets/js/94.a1d9bd01.js"><link rel="prefetch" href="/assets/js/95.44aa93a8.js"><link rel="prefetch" href="/assets/js/96.6d16523c.js"><link rel="prefetch" href="/assets/js/97.4d28340c.js"><link rel="prefetch" href="/assets/js/98.926b1d0d.js"><link rel="prefetch" href="/assets/js/99.189e88ce.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34dcb3ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar my-nav-gre"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端小菜鸟</span></a> <div class="links"><div class="search-box" style="border:none;"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/vue/" class="nav-link router-link-active">vue笔记</a></div><div class="nav-item"><a href="/react/" class="nav-link">react笔记</a></div><div class="nav-item"><a href="/js/" class="nav-link">js笔记</a></div><div class="nav-item"><a href="/wechat/" class="nav-link">微信小程序</a></div><div class="nav-item"><a href="/jiqiao/" class="nav-link">小技巧</a></div><div class="nav-item"><a href="/suanfa/" class="nav-link">算法和数据结构</a></div><div class="nav-item"><a href="/ts/" class="nav-link">typescrpt</a></div><div class="nav-item"><a href="/css/" class="nav-link">css</a></div><div class="nav-item"><a href="/babel/" class="nav-link">babel</a></div><div class="nav-item"><a href="/node/" class="nav-link">node</a></div><div class="nav-item"><a href="/database/" class="nav-link">数据库</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="background-image:linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/vue/" class="nav-link router-link-active">vue笔记</a></div><div class="nav-item"><a href="/react/" class="nav-link">react笔记</a></div><div class="nav-item"><a href="/js/" class="nav-link">js笔记</a></div><div class="nav-item"><a href="/wechat/" class="nav-link">微信小程序</a></div><div class="nav-item"><a href="/jiqiao/" class="nav-link">小技巧</a></div><div class="nav-item"><a href="/suanfa/" class="nav-link">算法和数据结构</a></div><div class="nav-item"><a href="/ts/" class="nav-link">typescrpt</a></div><div class="nav-item"><a href="/css/" class="nav-link">css</a></div><div class="nav-item"><a href="/babel/" class="nav-link">babel</a></div><div class="nav-item"><a href="/node/" class="nav-link">node</a></div><div class="nav-item"><a href="/database/" class="nav-link">数据库</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/vue/" class="sidebar-link">vue学习笔记</a></li><li><a href="/vue/vue.html" class="sidebar-link">vue知识点</a></li><li><a href="/vue/vue3.0.html" class="sidebar-link">vue3.0第一次学习</a></li><li><a href="/vue/vue3.0第二次学习.html" class="sidebar-link">vue3.0第二次学习</a></li><li><a href="/vue/计算属性.html" class="sidebar-link">计算属性setter和getter</a></li><li><a href="/vue/vue路由.html" class="sidebar-link">vue路由跳转</a></li><li><a href="/vue/vue-cli.html" class="sidebar-link">vue-cli</a></li><li><a href="/vue/vueui问题.html" class="sidebar-link">element UI框架使用技巧</a></li><li><a href="/vue/vue-router.html" class="sidebar-link">vue路由</a></li><li><a href="/vue/路由.html" class="sidebar-link">vue路由查缺补漏</a></li><li><a href="/vue/路由再次学习.html" class="sidebar-link">vue-router再次学习</a></li><li><a href="/vue/插件开发和全局组件.html" class="sidebar-link">vue插件开发和注册全局组件</a></li><li><a href="/vue/组件自定义使用v-model.html" class="sidebar-link">组件自定义使用v-model</a></li><li><a href="/vue/v-model原理.html" class="sidebar-link">v-model原理</a></li><li><a href="/vue/vue使用防抖.html" class="sidebar-link">在vue里使用防抖</a></li><li><a href="/vue/构造器和组件.html" class="sidebar-link">构造器和组件的区别</a></li><li><a href="/vue/Vue知识点再次学习.html" class="active sidebar-link">再次学习Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/Vue知识点再次学习.html#细节知识点-使用vue的插件过滤器都必须在vue实例化之前定义" class="sidebar-link">#细节知识点
+###使用vue的插件过滤器都必须在vue实例化之前定义</a></li></ul></li><li><a href="/vue/vuex.html" class="sidebar-link">VUeX</a></li><li><a href="/vue/vuex再次.html" class="sidebar-link">vuex再次学习</a></li><li><a href="/vue/nextTick.html" class="sidebar-link">nextTick异步更新</a></li><li><a href="/vue/监听子组件生命周期.html" class="sidebar-link">父组件监听子组件生命周期</a></li><li><a href="/vue/设置proxy跨域.html" class="sidebar-link">vue设置proxy跨域</a></li><li><a href="/vue/cli3设置环境变量.html" class="sidebar-link">cli3设置环境变量</a></li><li><a href="/vue/cli3使用webpack插件.html" class="sidebar-link">cli3使用webpack插件</a></li><li><a href="/vue/在vue里使用lottie.html" class="sidebar-link">使用在vue中使用lottie</a></li><li><a href="/vue/组件通信多次.html" class="sidebar-link">组件通信被触发多次</a></li><li><a href="/vue/ref和$refs.html" class="sidebar-link">ref和$refs的使用</a></li><li><a href="/vue/vue路由局部刷新原理.html" class="sidebar-link">vue路由局部刷新原理</a></li><li><a href="/vue/vue.extend.html" class="sidebar-link">vue.extend</a></li><li><a href="/vue/watch高级技巧.html" class="sidebar-link">watch实用技巧</a></li><li><a href="/vue/vue3.0使用.html" class="sidebar-link">vue3.0使用</a></li><li><a href="/vue/ssr.html" class="sidebar-link">vue-nuxt 服务端渲染</a></li><li><a href="/vue/自定义事件.html" class="sidebar-link">vue自定义事件原理</a></li><li><a href="/vue/vue计算属性和观察属性的差异.html" class="sidebar-link">vue计算属性和观察属性的差异</a></li><li><a href="/vue/vuediff算法.html" class="sidebar-link">Vuediff算法</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="再次学习vue"><a href="#再次学习vue" aria-hidden="true" class="header-anchor">#</a> 再次学习Vue</h3> <h3 id="不使用构建版本-使用网页版本"><a href="#不使用构建版本-使用网页版本" aria-hidden="true" class="header-anchor">#</a> 不使用构建版本,使用网页版本</h3> <ul><li><p>在实例化的时候，是大写的 Vue</p> <p>响应式的数据</p> <pre><code>	var data = {
+			a: 1
+			}
+			var vm = new Vue({
+				el: '#app',
+				data: data
+			})
+data.b=1;//这个就不是响应式的了 因为实例化后才注入的
+</code></pre> <p>现在data里面的a才是响应式的，因为他是在实例化前 就应经是被注入了,对b的改动不会触发视图的任何改动
+<strong>可以使用修改 但是这个地方稍后补偿</strong>
+主要是针对数组和对象来说   通过下标来修改vue不能监听到</p> <pre><code>arr:[1,2,3]
+arr[0]=a =&gt;vue监听不生效
+vue.set(arr,0,a) =&gt; 生效	
+
+使用Vue.set(object,key,value) &lt;===&gt;vm.set(object,key,value)
+这样就可以将其修改为响应式数据
+vm.$set(vm.data,'age',26) ===&gt; data{a:1,age:26}
+实例会暴露出以$开头的方法
+
+例如：vm.$data ===data  
+vm.$el===document.getElementById('app');
+</code></pre></li></ul> <p>生命周期钩子（最常用）：</p> <pre><code>created(){//初始化数据的生命周期钩子
+
+} 	
+mounted(){//DOM加载完毕的时候，使用操作DOM
+
+}
+</code></pre> <ul><li><p>模板语法</p> <pre><code>  v-bind:href='xxx' --&gt; 绑定样式 缩写 ---&gt;  :href='xxx'
+  
+  v-on:click='one' ----&gt; 绑定事件  缩写 --&gt; @click='xxxx'
+</code></pre></li> <li><p>计算属性和侦听属性</p> <pre><code>  计算属性定义的变量，可以不需要在data中定义  他是有缓存的 都需要有缓存机制
+  computed:{
+  	xxx(){
+  	return xxx
+  	}
+  }
+  
+  侦听属性是需要现在data里面定义的
+  watch:{
+  	question(new,old){
+  		//new 是状态
+  		//old 是旧状态
+  	}
+  }
+</code></pre></li> <li><p>class和style绑定</p> <p>使用v-bind来绑定class和style  可以是单个字符串、数组、对象</p></li> <li><p>对象语法</p> <pre><code>  &lt;div :class=&quot;{active:isActive}&quot;&gt;&lt;/div&gt;
+</code></pre> <p>active这个class的是否存在 取决于date中的isActive的是否存在</p> <pre><code>  &lt;div :class=&quot;classObject&gt;&lt;/div&gt;	
+  
+  data:{
+  classObject:{
+  	active:true
+  }
+  }
+</code></pre></li> <li><p>条件渲染</p></li> <li><p>用key来做唯一标识</p></li> <li><p>使用v-for把一个(数组、对象)对应为一组元素</p> <pre><code> 	let items=[1,2]
+ //	&lt;li v-for=&quot;(item,key) in items&quot; :key=&quot;index&quot;&gt;
+ 	//	
+ 	//&lt;/li&gt;		
+</code></pre> <ul><li>使用v-for来渲染 模板</li></ul> <ul></ul></li> <li><p>事件处理</p> <p>一般不带括号</p></li> <li><p>表单输入绑定</p> <ul><li><p>需要使用v-model 来完成双向数据绑定</p></li> <li><p>多选框的使用方法</p> <pre><code>    &lt;select v-model=&quot;selected&quot;&gt;
+      &lt;option disabled value=&quot;&quot;&gt;请选择&lt;/option&gt;
+      &lt;option&gt;A&lt;/option&gt;
+      &lt;option&gt;B&lt;/option&gt;
+      &lt;option&gt;C&lt;/option&gt;
+  &lt;/select&gt;
+</code></pre></li> <li><p>修饰符 .lazy</p> <pre><code>  将input事件转化为Chage事件进行同步
+  v-model.lazy=&quot;a&quot;
+</code></pre></li></ul></li> <li><p>组件基础</p> <ul><li><p>定义一个组件	并且是全局组件</p> <pre><code>Vue.component('组件名称',{
+	template:'#app',//这个地方可以使用template来完成
+	data(){
+	return {
+	
+	}
+	}
+})
+
+&lt;template id=&quot;app&quot;&gt;
+//就和组件里面的内容对应起来了
+
+&lt;/template&gt;	
+</code></pre></li> <li><p>通过prop向子组件传递数据</p> <pre><code>  通过属性绑定的方法来完成数据的传递
+  &lt;xd :name=&quot;xxxx&quot;&gt;&lt;/xd&gt;
+  组件接受
+  props:['name']
+</code></pre></li> <li><p>通过事件监听来完成 子组件对父组件的完成</p></li> <li><pre><code>  		&lt;xd @click=&quot;a&quot;&gt;&lt;/xd&gt;	
+  		子组件通过：this.$emit('xx')来完成触发
+  **最优的解决方法 是使用vuex**		
+</code></pre></li> <li><p>插槽
+如果在组件中间需要自定义内容例如</p> <pre><code>  &lt;template&gt;
+  	&lt;div&gt;
+  		&lt;p&gt;xxx&lt;/p&gt;
+  	&lt;/div&gt;
+  &lt;/template&gt;
+  
+  &lt;xd&gt;xxxxx&lt;/xd&gt;  ===&gt; 会报错
+  
+  但是如果在模板中加入插槽&lt;solt&gt;&lt;/solt&gt;那么就不会报错
+  
+  &lt;template&gt;
+  	&lt;div&gt;
+  		&lt;p&gt;xxx&lt;/p&gt;
+  		&lt;solt&gt;&lt;/solt&gt;
+  	&lt;/div&gt;
+  &lt;/template&gt;
+  
+  	&lt;xd&gt;xxxxx&lt;/xd&gt;  ===&gt; 不会报错
+</code></pre></li></ul></li> <li><p>prop</p> <ul><li><p>可以初始化定义传入的props的类型和初始化值</p> <pre><code>  	props:{
+  	title:String,
+  	likes:{
+  		type：Number,
+  		default:1
+  	},
+  	arr:{//定义数组和对象的默认值，必须从一个工厂函数获取
+  	type:object,
+  	default(){
+  	return {mess:'hello}
+  	},
+  	func:{//自定义验证函数
+  	validator(value){
+  	// 这个值必须匹配下列字符串中的一个
+    return ['success', 'warning','danger'].indexOf(value) !== -1		}
+  	}
+  	}
+  	}
+</code></pre></li> <li><p>使用props:['a'],中的数据是使用<strong>this.a来完成使用</strong></p></li></ul></li> <li><p>插槽</p> <ul><li>使用普通插槽</li></ul> <p>在组件的内部直接使用</p> <pre><code>  &lt;template id=&quot;hear&quot;&gt;
+          &lt;div style=&quot;width:100%;height:200px;background:pink&quot;&gt;
+          我是头部组件
+          &lt;slot&gt;&lt;/slot&gt;
+      &lt;/div&gt;
+  &lt;/template&gt;
+  
+  &lt;hear&gt;我是使用了普通插槽的方法了&lt;/hear&gt;
+</code></pre></li> <li><p>使用具名插槽</p> <pre><code>  	组件
+  	&lt;hear&gt;
+  		  &lt;template slot=&quot;foo&quot;&gt;
+                 &lt;h1&gt;Here might be a page title&lt;/h1&gt;
+             &lt;/template&gt;
+  	&lt;/hear&gt;
+  	   
+ 		&lt;template id=&quot;hear&quot;&gt;
+             &lt;div&gt;
+                 &lt;slot name=&quot;foo&quot;&gt;&lt;/slot&gt;
+       		  &lt;/div&gt;
+     &lt;/template&gt;	
+     
+ 指定渲染 具名插槽需要使用 templte 来完成
+</code></pre></li> <li><p>动态组件和异步组件</p> <ul><li><p>使用keep-alive来完成对组件的缓存，避免组件重复渲染,使用is来切换不同的组件</p> <keep-live><pre><code>  &lt;hear&gt;&lt;/hear&gt;
+</code></pre></keep-live></li></ul></li> <li><p>访问元素&amp;组件</p> <ul><li><p>通过DOM直接访问组件</p> <pre><code>  &lt;div ref=&quot;aaa&quot;&gt;&lt;/div&gt;
+  
+  this.$refs.aaa
+</code></pre></li></ul></li> <li><p>过渡效果</p></li> <li><p>使用插件</p> <ul><li><p>通过全局方法使用插件</p> <pre><code>  Vue.use() //需要在new Vue实例化前 完成
+  &lt;!--也可以传递一个选项对象--&gt;
+  Vue.use(xxx,{aaa:true})			
+</code></pre></li></ul></li> <li><p>过滤器</p> <pre><code>  1. 在 //在花括号中
+  2. 在 &lt;div v-bind:id=&quot;rawId|xxx&quot;&gt;&lt;/div&gt;	
+  3. 定义全局过滤器
+  
+  Vue.filter('过滤器名字',function(value){//value就是我们|前面的内容  value是我们传入的参数 
+  if(!value){
+  	return ''
+  }
+  value=value.toString()
+  return xxxx;
+  
+  })
+</code></pre></li> <li><p>带参数的过滤器</p> <pre><code> 	//
+ 
+ filterA 被定义为接收三个参数的过滤器函数。其中 message 的值作为第一个参数，普通字符串 'arg1' 作为第二个参数，表达式 arg2 的值作为第三个参数。 就是相当于mess就是需要我们过滤的信息		
+</code></pre></li> <li><p>混入属性</p> <p>执行顺序:混入先执行,原生的后执行 注意：不是覆盖而是分别执行一次</p> <ul><li><p>定义混入对象 我们可以再混入对象里面使用完整的vue的所有方法和事件</p> <pre><code>  		//定义混入对象
+  		var myminxin={
+  			created(){
+  				this.hello //这个this指向我们混入的vue对象实例
+  			}
+  		}
+</code></pre></li> <li><p>实例化</p> <pre><code>  var vm=new Vue({
+  	mixins:[我们定义的混入对象的名字]
+  })	
+</code></pre></li></ul></li></ul> <p>16 动态组件 使用 component 组件来完成对组件的动态显示</p> <pre><code>根据is 来动态切换组件
+
+&lt;component :is=&quot;componentId&quot;&gt;&lt;/component&gt;
+</code></pre> <hr> <h2 id="细节知识点-使用vue的插件过滤器都必须在vue实例化之前定义"><a href="#细节知识点-使用vue的插件过滤器都必须在vue实例化之前定义" aria-hidden="true" class="header-anchor">#</a> #细节知识点
+###使用vue的插件过滤器都必须在vue实例化之前定义</h2> <ol><li><p>打印vue实例,里面会有一些以$符号为前缀的一些属性.这些就是我们可以访问的特殊的Vue属性</p></li> <li><p>vue常用实例属性和方法
+<img src="https://www.w3cplus.com/sites/default/files/blogs/2017/1711/Vue-propertype-methods.png" alt="图片展示"></p> <p>2.1 全局API</p> <p>Vue.extend:使用基础Vue构造器，创建一个“子类”。参数是一个包含组件选项的对象著作权归作者所有。</p> <p>Vue.nextTick：在下次DOM更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的DOM  <strong>修改数据以后调用 就是更新数据以后 立刻操作DOM</strong></p> <p>Vue.set：设置对象的属性。如果对象是响应式的，确保属性被创建后也是响应式的，同时触发视图更新。这个方法主要用于避开Vue不能检测属性被添加的限制</p> <p>Vue.delete：删除对象的属性。如果对象是响应式的，确保删除能触发更新视图。这个方法主要用于避开Vue不能检测到属性被删除的限制，但是你应该很少会使用它</p> <p>Vue.directive：注册或获取全局指令</p> <p>Vue.filter：注册或获取全局过滤器</p> <p>Vue.component：注册或获取全局组件。注册还会自动使用给定的id设置组件的名称</p> <p>Vue.use：安装Vue.js插件</p> <p>Vue.mixin：全局注册一个混合，影响注册之后所有创建的每个Vue实例</p> <p>Vue.compile：在render函数中编译模板字符串。只在独立构建时有效</p> <p>简化声明周期
+<img src="https://www.w3cplus.com/sites/default/files/blogs/2017/1711/vue-instances-and-life-cycles-12.png" alt="简化生命周期"></p></li> <li><p>watch观察者</p> <ol><li><p>函数接受2个参数 一个是新值,一个是旧值</p></li> <li><p>删除观察者</p> <p>每当我们使用$watch方法时，它实际上会返回一个函数，然后我们可以调用它来停止观察脚本中后面的更改</p> <p>var unwatch = vm.$watch('a', cb)// 之后取消观察unwatch()</p></li></ol></li> <li><p>使用methods的注意点</p> <pre><code>1.在调用methods定义的方法时，一定得加上小括号()，不然输出的将是整个函数中的字符，类似下图这样
+2.不能使用es6的箭头函数 只能使用es5语法，否则会照常不能联系到上线文
+</code></pre> <p>###与computed的差异:
+1.从作用机制上看</p> <p>computed:是以Vue的依赖追踪机制为基础的，其试图处理这样的一件事情：当某一个数据（依赖数据）发生变化的时候，所有依赖这个数据的相关数据会自动发生变化，也就是自动调用相关的函数去实现数据的变动</p> <p>methods:是用来定义函数的，它需要手动调用才能执行，而不像computed那样，可以自动执行预先定义的函数</p> <p>总结:methods里面定义的函数 是需要主动调用的，而computed定义的函数是会自动调用的,完成 我们希望完成的作用</p> <p>2.从性质上看
+computed:是计算属性，事实上和data对象里面的数据属性是同意类<br>
+methods:是定义的函数,是想JavaScript中的funtion()函数这样去调用他</p> <p>##computed擅长使用的是:一个数据受多个数据的影响</p></li></ol> <p>计算属性的变量：是不用提前声明的</p> <p>5.事件</p> <pre><code>1. &lt;p @click=&quot;gerr&quot;&gt;&lt;/p&gt;	//单纯调用 是不用写 括号的
+2. 如果要传入原生DOM 需要传入特殊变量$event
+</code></pre> <p>6.组件通信
+<img src="https://www.w3cplus.com/sites/default/files/blogs/2019/1902/vue-component-data-communication-1.png" alt="组件通信">
+1.父组件获取子组件的数据和事件可以通过</p> <pre><code>	1.通过给子组件绑定ref属性来获取子组件实例
+		
+		&lt;my ref=&quot;re&quot;&gt;&lt;/my&gt;
+		
+		----
+		new Vue({
+			methods:{
+			 a(){
+			 //获取到子组件实例
+			 	this.$refs 
+			 }
+			}
+		})
+	2. 通过this.$children来获取子组件的实例
+		//获取到子组件实例
+		this.$children
+</code></pre> <p>2.子组件获取父组件数据和事件</p> <pre><code>	1.通过props传递父组件的数据和事件,或者通过$emit和$on完成事件传递
+	2.通过使用this.$parent.$data 或者 this.$parent.$_data获取父组件数据,通过this.$parent执行父组件方法
+	父组件
+	methods:{
+		he(){
+		}
+	}
+	子组件内部:
+	获取到父组件的信息
+	this.$parent.$data
+	调用方法
+	this.$parent.he(可传参数)
+</code></pre> <p>3.兄弟组件的数据通信和事件传递</p> <pre><code>	1.eventBus挂载全局事件
+	var bus=new Vue();
+	子组件1：
+	bus.$emit('do','参数')//发送
+	子组件2:
+	bus.$on('do',(参数) =&gt; {//接受
+		console.log('12')
+	})		
+	2.利用$parent进行数据传递，使用$parent.$children调用兄弟组件事件 **目前没有弄懂**
+	3.使用$attrs和$listeners来实现数据之间的通信。
+	
+	利用$attrs实现祖孙组件间的数据传递，$listeners实现祖孙组件间的事件监听。
+	$attrs是一个属性的集合 
+	**包含了父作用域中不作为 prop 被识别 (且获取) 的特性绑定 (class 和 style 除外)  也就是需要v-bind来绑定的 但是只是没有在props里面使用**
+	$listeners是一个事件的集合,2着都是以对象的形式来保持数据的
+	
+	&lt;my :name=&quot;xx&quot; :age=&quot;a&quot; :tow=&quot;to&quot;&gt;&lt;/my&gt;
+	
+	子组件
+	props:[
+	name
+	]
+	然后获取到
+	this.$attrs  ==&gt; age 因为age没有在props中使用
+	使用
+	this.$listeners.two =&gt; 就可以调用 父组件的to方法
+	---
+	父组件
+	data(){
+		name:
+		age:
+	},
+	methods:{
+		to(){
+		
+		}
+	}
+	
+	&lt;top&gt;
+	    &lt;center&gt;
+	        &lt;bottom&gt;
+	        &lt;/bottom&gt;
+	    &lt;/center&gt;
+	&lt;/top&gt;
+	
+	需求 top和bottom通信 数据交互
+	
+	&lt;top @getClick=&quot;xx&quot; @get=&quot;xx&quot; :name=&quot;xx&quot; :age=&quot;xx&quot;&gt;
+	
+		&lt;center v-on=&quot;$listeners&quot; v-bind=&quot;$attrs&quot;&gt;
+			
+		&lt;/center&gt;
+	
+center 组件中接收 age 那么age 就不会传递给	bottom组件
+就只会把 A组件的name 传递给bottom组件  使用props接收
+但是 事件除了有.native的修饰符不能接收 其他的都能接受
+就可以直接调用 this.$emit('get')即可
+	
+如何引用
+1.声明一个js文件 然后 导出 在需要使用的地方 使用就可以了
+2.挂载到原型链上  先声明 一个实例  然后绑定到vue原型链上	
+	
+!(参考链接)[https://blog.csdn.net/qq_33559093/article/details/82878862]	
+</code></pre> <p>4.过渡</p> <pre><code>1.v-enter-active v-leave-active 用来定义离开过渡的过程时间，延迟和曲线函数
+2.v-enter v-leave-to 定义离开的动作 
+以上都是配合使用
+</code></pre> <p><img src="https://www.w3cplus.com/sites/default/files/blogs/2018/1812/vue-transition-10.png" alt="进入动画详解"></p> <p>Vue只能对transition中的一个元素进行动效处理。相反，在任何给定的实例中，只能将transition中的一个元素插入到DOM中著作权归作者所有。 如果需要多个那么只能使用 transition-group</p> <p>5.混合</p> <p><strong>mixins是一个JavaScript对象</strong>,可以包含组件中的任何选项</p> <pre><code>	定义:
+	myminxs={
+		methods:{
+		a(){console.log(1)}
+		}
+	}
+	
+	注入:
+	var vm=new Vue({
+		mixins:[]//数组
+	})
+	在本地里面调用混合的方法 
+	this.a() ==&gt; 即可调用
+</code></pre> <p>混合的合并和冲突</p> <pre><code>1. 默认是mixins上会首先被注册，接着组件上的接着注册,  如果有多个混合选项 如果有相同项 前后的会被后面的覆盖
+2. mixins的合并有三种情况：数据data 声明周期钩子 键为对象的值
+</code></pre> <p>1.数据合并</p> <pre><code>数据对象在内部分进行浅合并（一层属性深度），在和组件的数据发生冲突时，以组件数据优先。
+</code></pre> <p>2.钩子函数的合并</p> <pre><code>当组件使用的mixins对象有相同的选项时,比如钩子函数，就会被全部合并到一个数组中，因此都会被执行，并且mixins的钩子会先被执行
+</code></pre> <p>3.值为对象选项合并</p> <pre><code>当mixins对象和组件中的选项的值为对象时，比如methods、components和directives，将被混合为同一个对象。当两个对象键名冲突时，组件选项优先。		
+</code></pre> <p>使用router-view传递事件 和传递属性  然后在路由加载的组件里面使用 props来接受和使用
+
+&lt;router-view :msg=&quot;msg&quot; @tag=&quot;a&quot;&gt;
+传递属性 必须和传递的变量一样 否则不能使用</p> <pre><code>&lt;!--路由展示的组件里使用--&gt;
+ props:['msg'],
+created(){
+    this.$emit('tag')
+}
+</code></pre></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">12/16/2019, 10:10:37 AM</span></div></footer> <div class="page-nav"><p class="inner" style="border:none"><span class="prev">
+        ←
+        <a href="/vue/构造器和组件.html" class="prev">
+          构造器和组件的区别
+        </a></span> <span class="next"><a href="/vue/vuex.html">
+          VUeX
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.7ee303dc.js" defer></script><script src="/assets/js/2.1031c649.js" defer></script><script src="/assets/js/110.b8d5aa52.js" defer></script>
+  </body>
+</html>
